@@ -1,0 +1,15 @@
+overwrite: true
+schema: ${API_BASE:https://console.duoyun.work/api/v2/}schema
+documents: "src/**/*.graphql"
+generates:
+  src/generated/graphql.tsx:
+    hooks:
+      afterOneFileWrite:
+        - eslint --fix
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-react-apollo"
+    config:
+      # https://github.com/dotansimha/graphql-code-generator/issues/3919#issuecomment-618431761
+      maybeValue: "T"

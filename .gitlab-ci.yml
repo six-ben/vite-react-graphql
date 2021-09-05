@@ -1,0 +1,15 @@
+image: hub.cloudfine.work/library/node
+
+stages:
+  - lint
+
+lint:
+  stage: lint
+  cache:
+    key: "lint"
+    paths:
+      - node_modules/
+  script:
+    - yarn
+    - yarn run lint
+    - yarn run test
