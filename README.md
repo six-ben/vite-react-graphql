@@ -1,5 +1,3 @@
-## cdnsaas
-
 - global data management: effector-react
 - style: styled-component
 - type check: IDE // 构建时没有类型检查
