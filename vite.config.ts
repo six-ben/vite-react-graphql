@@ -37,8 +37,8 @@ const config = async ({ command, mode }) => {
           manifest: {
             start_url: '/?utm_source=web_app_manifest',
             scope: '/',
-            name: 'CloudFine Console',
-            short_name: 'CloudFine',
+            name: 'name',
+            short_name: 'name',
             background_color: '#fff',
             theme_color: 'black',
             lang: 'zh',
@@ -63,13 +63,13 @@ const config = async ({ command, mode }) => {
     server: {
       proxy: {
         '/api/v2': {
-          target: 'https://console.duoyun.work',
+          target: 'url',
           changeOrigin: true,
         },
       },
-      hmr:{
-        overlay: false
-      }
+      hmr: {
+        overlay: false,
+      },
     },
     css: {
       preprocessorOptions: {

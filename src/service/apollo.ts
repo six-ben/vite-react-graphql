@@ -82,7 +82,6 @@ export const apolloClient = new ApolloClient({
             // 网络问题重试
             [0, 504].includes(error?.statusCode) ||
             // 服务器可恢复错误
-            // https://cloudfine.feishu.cn/mindnotes/bmncnyA4dcAxh8X9KIl1B1LQkJc
             [2, 4, 5, 8, 10, 11, 13, 14, 500000].includes(error?.result?.errors?.[0]?.extensions?.code)
           );
         },

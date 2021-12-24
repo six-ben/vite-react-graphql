@@ -1,5 +1,5 @@
 overwrite: true
-schema: ${API_BASE:https://console.duoyun.work/api/v2/}schema
+schema: ${API_BASE:url}schema
 documents: "src/**/*.graphql"
 generates:
   src/generated/graphql.tsx:
